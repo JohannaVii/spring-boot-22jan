@@ -3,14 +3,12 @@ package se.iths.johanna.springboot22jan.model;
 public class Person {
 
     // Attribut
-
     private int id;
     private String name;
     private int age;
     private String email;
 
     // Constuctor and setters
-
     public Person(int id, String name, int age, String email) {
         this.id = id;
         this.name = name;
