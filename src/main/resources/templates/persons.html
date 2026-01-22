@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Persons</title>
+</head>
+<body>
+<ul>
+    <li th:each="p : ${persons}">
+        <span th:text="${p.id}"></span> |
+        <span th:text="${p.name}"></span>,
+        <span th:text="${p.age}"></span> (<span th:text="${p.email}"></span>)
+    </li>
+</ul>
+
+</body>
+</html>
