@@ -4,20 +4,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import se.iths.johanna.springboot22jan.model.User;
-
-import java.util.List;
+import se.iths.johanna.springboot22jan.service.UserService;
 
 @Controller
 public class UserController {
+    private final UserService userService;
 
     private User user;
 
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
     @GetMapping("/user")
     public String userInfo(Model model) {
-        List<User> users = List.of(
-                new User("jossiy", "123lös", "josefine.b@test.se"),
-                new User("Johanna", "456", "Johanna.V@test.se"));
-        model.addAttribute("users", users);
+        model.addAttribute("users", userService.getUserList());
         return "user";
     }
 }
