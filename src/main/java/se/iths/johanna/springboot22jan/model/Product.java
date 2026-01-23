@@ -9,7 +9,7 @@ public class Product {
     private double price;
     private String description;
 
-    // Constructor and setters
+    // Constructor
     public Product(int id, String category, String name, double price, String description) {
         this.id = id;
         this.category = category;
@@ -39,6 +39,28 @@ public class Product {
         return description;
     }
 
+    // Setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    // toString-metod
     @Override
     public String toString() {
         return "Product{" +
